@@ -44,8 +44,7 @@ const TodoTasks = () => {
   if (filteredTodos.length === 0) {
     return (
       <div className="empty-state">
-        <div className="hologram-text">NO ACTIVE MISSIONS</div>
-        <div className="scan-line"></div>
+        <div className="empty-text">📜 No Quests Inscribed 📜</div>
       </div>
     )
   }

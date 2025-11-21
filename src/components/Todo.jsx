@@ -3,15 +3,15 @@ import TodoFilter from './TodoFilter'
 import TodoTasks from './TodoTasks'
 import './style.css'
 
-const FuturisticTodo = () => {
+const MedievalTodo = () => {
   return (
-    <div className="futuristic-app">
-      <div className="grid-background"></div>
-      <div className="futuristic-container">
-        <header className="futuristic-header">
+    <div className="medieval-app">
+      <div className="parchment-background"></div>
+      <div className="medieval-container">
+        <header className="medieval-header">
           <h1 className="title">
-            <span className="title-main">MISSION CONTROL</span>
-            <span className="title-sub">Task Management System v2.0</span>
+            <span className="title-main">⚔️ ROYAL QUEST SCROLL ⚔️</span>
+            <span className="title-sub">~ Keeper of Noble Tasks ~</span>
           </h1>
           <div className="header-line"></div>
         </header>
@@ -24,4 +24,4 @@ const FuturisticTodo = () => {
   )
 }
 
-export default FuturisticTodo
+export default MedievalTodo

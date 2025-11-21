@@ -16,20 +16,18 @@ const TodoForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="futuristic-form">
+    <form onSubmit={handleSubmit} className="medieval-form">
       <div className="input-wrapper">
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Enter mission objective..."
-          className="futuristic-input"
+          placeholder="Inscribe thy quest here..."
+          className="medieval-input"
         />
-        <div className="input-glow"></div>
       </div>
-      <button type="submit" className="futuristic-btn">
-        <span className="btn-text">DEPLOY</span>
-        <div className="btn-glow"></div>
+      <button type="submit" className="medieval-btn">
+        <span className="btn-text">⚔️ Decree</span>
       </button>
     </form>
   )

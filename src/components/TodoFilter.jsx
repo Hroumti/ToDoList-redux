@@ -7,14 +7,14 @@ const TodoFilter = () => {
     const currentFilter = useSelector((state) => state.todos.filter)
 
     const filters = [
-        { value: 'all', label: 'All' },
-        { value: 'completed', label: 'Completed' },
-        { value: 'notCompleted', label: 'Not Completed' }
+        { value: 'all', label: 'All Quests' },
+        { value: 'completed', label: 'Conquered' },
+        { value: 'notCompleted', label: 'Pending' }
     ]
 
     return (
         <div className="filter-container">
-            <span className="filter-label">Filtrer les tâches</span>
+            <span className="filter-label">🏰 Filter Thy Quests</span>
             <div className="filter-buttons">
                 {filters.map(filter => (
                     <button

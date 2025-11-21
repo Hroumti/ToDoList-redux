@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const loadFromLocalStorage = () => {
   try {
-    const saved = localStorage.getItem('futuristic-todos');
+    const saved = localStorage.getItem('medieval-todos');
     return saved ? JSON.parse(saved) : [];
   } catch (error) {
     return [];
@@ -25,25 +25,25 @@ const todosSlice = createSlice({
         completed: false,
         createdAt: new Date().toISOString()
       });
-      localStorage.setItem('futuristic-todos', JSON.stringify(state.todos));
+      localStorage.setItem('medieval-todos', JSON.stringify(state.todos));
     },
     toggleTodo: (state, action) => {
       const todo = state.todos.find((todo) => todo.id === action.payload);
       if (todo) {
         todo.completed = !todo.completed;
       }
-      localStorage.setItem('futuristic-todos', JSON.stringify(state.todos));
+      localStorage.setItem('medieval-todos', JSON.stringify(state.todos));
     },
     deleteTodo: (state, action) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
-      localStorage.setItem('futuristic-todos', JSON.stringify(state.todos));
+      localStorage.setItem('medieval-todos', JSON.stringify(state.todos));
     },
     editTodo: (state, action) => {
       const todo = state.todos.find((todo) => todo.id === action.payload.id);
       if (todo) {
         todo.text = action.payload.text;
       }
-      localStorage.setItem('futuristic-todos', JSON.stringify(state.todos));
+      localStorage.setItem('medieval-todos', JSON.stringify(state.todos));
     },
     setFilter: (state, action) => {
       state.filter = action.payload;

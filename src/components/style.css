@@ -402,3 +402,89 @@
     width: 100%;
   }
 }
+/* 
+Edit Functionality Styles */
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.task-edit-input {
+  flex: 1;
+  padding: 0.5rem;
+  background: rgba(0, 20, 40, 0.9);
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  font-family: monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  transition: all 0.3s;
+  box-shadow:
+    inset 0 0 10px rgba(0, 255, 255, 0.2),
+    0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.task-edit-input:focus {
+  outline: none;
+  box-shadow:
+    inset 0 0 15px rgba(0, 255, 255, 0.3),
+    0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+.edit-btn,
+.save-btn,
+.cancel-btn {
+  width: 35px;
+  height: 35px;
+  border: 2px solid;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.edit-btn {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: #00ffff;
+  color: #00ffff;
+}
+
+.edit-btn:hover {
+  background: rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.save-btn {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: #00ff88;
+  color: #00ff88;
+}
+
+.save-btn:hover {
+  background: rgba(0, 255, 136, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  transform: scale(1.1);
+}
+
+.cancel-btn {
+  background: rgba(255, 165, 0, 0.1);
+  border-color: #ffa500;
+  color: #ffa500;
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 165, 0, 0.3);
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.edit-icon,
+.save-icon,
+.cancel-icon {
+  line-height: 1;
+}

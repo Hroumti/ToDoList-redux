@@ -41,8 +41,15 @@ const todosSlice = createSlice({
     setFilter: (state, action) => {
       state.filter = action.payload;
     },
+    editTodo: (state, action) => {
+      const todo = state.todos.find((todo) => todo.id === action.payload.id);
+      if (todo) {
+        todo.text = action.payload.text;
+      }
+      localStorage.setItem('futuristic-todos', JSON.stringify(state.todos));
+    },
   },
 });
 
-export const { addTodo, toggleTodo, deleteTodo, setFilter } = todosSlice.actions;
+export const { addTodo, toggleTodo, deleteTodo, setFilter, editTodo } = todosSlice.actions;
 export default todosSlice.reducer;

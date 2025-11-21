@@ -1,8 +1,10 @@
-import { useTodos } from './TodoContext'
+import { useSelector, useDispatch } from 'react-redux'
+import { toggleTodo, deleteTodo } from '../features/toggleSlice'
 import './style.css'
 
 const TodoTasks = () => {
-  const { todos, toggleTodo, deleteTodo } = useTodos()
+  const todos = useSelector((state) => state.todos)
+  const dispatch = useDispatch()
 
   if (todos.length === 0) {
     return (
@@ -19,18 +21,18 @@ const TodoTasks = () => {
         <div key={todo.id} className={`task-card ${todo.completed ? 'completed' : ''}`}>
           <div className="task-border"></div>
           <div className="task-content">
-            <button 
+            <button
               className="task-checkbox"
-              onClick={() => toggleTodo(todo.id)}
+              onClick={() => dispatch(toggleTodo(todo.id))}
             >
               <div className="checkbox-inner">
                 {todo.completed && <span className="checkmark">✓</span>}
               </div>
             </button>
             <span className="task-text">{todo.text}</span>
-            <button 
+            <button
               className="delete-btn"
-              onClick={() => deleteTodo(todo.id)}
+              onClick={() => dispatch(deleteTodo(todo.id))}
             >
               <span className="delete-icon">×</span>
             </button>

@@ -1,15 +1,16 @@
 import { useState } from 'react'
-import { useTodos } from './TodoContext'
+import { useDispatch } from 'react-redux'
+import { addTodo } from '../features/toggleSlice'
 import './style.css'
 
 const TodoForm = () => {
   const [input, setInput] = useState('')
-  const { addTodo } = useTodos()
+  const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
     e.preventDefault()
     if (input.trim()) {
-      addTodo(input)
+      dispatch(addTodo(input.trim()))
       setInput('')
     }
   }
